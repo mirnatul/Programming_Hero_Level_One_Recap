@@ -1,0 +1,81 @@
+p {
+    color: red;
+}
+
+#id_name {}
+
+.class_name {}
+
+/* p element having a center class */
+p.center {}
+
+* {}
+
+h1,
+h2,
+p {}
+
+/* every p descendants of div */
+div p {
+    background-color: yellow;
+}
+
+/* every p that are direct children of div */
+div>p {
+    background-color: yellow;
+}
+
+/* only p after div */
+div+p {
+    background-color: yellow;
+}
+
+/* every p after div */
+div~p {
+    background-color: yellow;
+}
+
+
+
+/* unvisited link */
+a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* mouse ove any element */
+div:hover {
+    color: #a8c500;
+}
+
+/* hover on div what happpens to p */
+div:hover p {
+    display: block;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+
+input:focus {}
+
+/* p element that is the first child of any element */
+p:first-child {}
+
+/* first em inside every p */
+p em:first-child {}
+
+/* em in p that is the first child of any element (not body) */
+p:first-child em {}
+
+/* This is comment */
