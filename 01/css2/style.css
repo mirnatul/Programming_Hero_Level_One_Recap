@@ -1,0 +1,43 @@
+p {
+    border-style: dotted;
+    border-width: 5px;
+    border-color: green;
+
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+
+    border: 5px solid red;
+
+    border-radius: 5px;
+
+    /* margins */
+    margin-top: 100px;
+
+    margin: auto;
+
+
+    /* padding */
+    padding: 50px;
+
+    width: 300px;
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    height: 100px;
+    width: 500px;
+
+    /* outline offset */
+    outline-offset: 1px;
+
+    max-width: 500px;
+    margin: auto;
+}
+
+.first_div {
+    width: 500px;
+    margin: 20px auto;
+    border: 2px solid black;
+}

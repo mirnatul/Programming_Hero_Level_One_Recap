@@ -1,0 +1,7 @@
+body {
+    background-color: lightblue;
+    background-image: url("pic.avif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+}
