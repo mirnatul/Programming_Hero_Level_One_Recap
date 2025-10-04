@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav>ul {
+            display: flex;
+        }
+
+        nav li {
+            list-style: none;
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav li:hover {
+            background-color: lightgreen;
+        }
+
+        nav li .dropdown {
+            display: none;
+        }
+
+        .cart:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li class="cart">
+                    <a href="">Cart</a>
+                    <ul class="dropdown">
+                        <li><a href="">sub 1</a></li>
+                        <li><a href="">sub 2</a></li>
+                        <li><a href="">sub 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Profile</a></li>
+            </ul>
+        </nav>
+        <!-- banner -->
+    </header>
+
+
+
+    <figure>
+        <img src="../css/pic.avif" alt="Trulli" style="width:100%">
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
+
+
+    <!-- radio testing -->
+    <form>
+        <p>Choose your gender:</p>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+
+        <p>Choose your age range:</p>
+        <input type="radio" name="age" value="teen"> Teen
+        <input type="radio" name="age" value="adult"> Adult
+    </form>
+</body>
+
+</html>
