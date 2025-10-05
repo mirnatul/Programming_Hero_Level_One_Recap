@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap');
+
+* {
+    font-family: "Bitcount Prop Single Ink", system-ui;
+}
+
+#hero {
+    height: 500px;
+    background: linear-gradient(180deg, rgb(16, 16, 16) -19.5%, rgba(16, 16, 16, 0) 100%), url('../dymmy_image.avif')
+}
