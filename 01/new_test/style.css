@@ -8,3 +8,39 @@
     height: 500px;
     background: linear-gradient(180deg, rgb(16, 16, 16) -19.5%, rgba(16, 16, 16, 0) 100%), url('../dymmy_image.avif')
 }
+
+button {
+    text-align: center;
+}
+
+li:nth-child(2n+1) {
+    background-color: black;
+}
+
+.dummy {
+    height: 300px;
+    width: 500px;
+    background-color: red;
+    border: 2px solid black;
+}
+
+.dummy-green {
+    position: sticky;
+    top: 0;
+    height: 300px;
+    width: 500px;
+    background-color: green;
+    border: 2px solid black;
+}
+
+.dum {
+    height: 300px;
+    width: 500px;
+    background-color: yellow;
+    border: 2px solid black;
+}
+
+.sec-one {
+    position: relative;
+    border: 2px solid peru;
+}
