@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Counter = () => {
     const [count, setCount] = useState(0);
@@ -9,6 +9,18 @@ const Counter = () => {
         // console.log("added buttont to increase number");
         // setCount(5)
     }
+
+
+    // useEffect(() => {
+    //     const fetchUser = async () => {
+    //         const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+    //         const data = await response.json();
+    //         setUser(data);
+    //     };
+
+    //     fetchUser();
+    // }, []);
+
 
     return (
         <div>
