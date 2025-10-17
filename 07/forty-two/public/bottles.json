@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "AquaPure 1L",
+        "brand": "AquaPure",
+        "capacity_ml": 1000,
+        "material": "Plastic (BPA-free)",
+        "price_usd": 1.5,
+        "image": "https://images.unsplash.com/photo-1602082918363-6e0e3d2c5f69?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        "id": 2,
+        "name": "HydroMax Steel Bottle",
+        "brand": "HydroMax",
+        "capacity_ml": 750,
+        "material": "Stainless Steel",
+        "price_usd": 12.99,
+        "image": "https://images.unsplash.com/photo-1590174476802-1b1b1e9f3b5f?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        "id": 3,
+        "name": "EcoSpring Glass",
+        "brand": "EcoSpring",
+        "capacity_ml": 500,
+        "material": "Glass",
+        "price_usd": 9.5,
+        "image": "https://images.unsplash.com/photo-1610398752709-df84e8c31f27?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        "id": 4,
+        "name": "MountainFresh Sports Bottle",
+        "brand": "MountainFresh",
+        "capacity_ml": 1200,
+        "material": "Plastic (Recycled)",
+        "price_usd": 7.25,
+        "image": "https://images.unsplash.com/photo-1623611345043-02a2f7b2e5e1?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        "id": 5,
+        "name": "ThermoWave Insulated",
+        "brand": "ThermoWave",
+        "capacity_ml": 1000,
+        "material": "Double-Wall Stainless Steel",
+        "price_usd": 15.0,
+        "image": "https://images.unsplash.com/photo-1607083209269-68d9f7c5c8d2?auto=format&fit=crop&w=600&q=80"
+    }
+]
