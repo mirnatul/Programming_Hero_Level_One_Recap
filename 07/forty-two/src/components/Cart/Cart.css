@@ -1,0 +1,9 @@
+.cart {
+    width: 100px;
+
+}
+
+.cart-container {
+    display: flex;
+    gap: 10px;
+}
