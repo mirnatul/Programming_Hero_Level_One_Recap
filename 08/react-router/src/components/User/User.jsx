@@ -42,7 +42,7 @@ const User = ({ user }) => {
 
             <button onClick={() => handleNavigate(id)}>Details of: {id}</button>
 
-            <button onClick={() => setShowInfo(!showInfo)}>{showInfo ? 'Hide' : 'Show info'} info</button>
+            <button onClick={() => setShowInfo(!showInfo)}>{showInfo ? 'Hide' : 'Show info'}</button>
 
             {showInfo && <Suspense fallback={<span>Loading...</span>}>
                 <UserDetailsToo userPromise={userPromise}></UserDetailsToo>
