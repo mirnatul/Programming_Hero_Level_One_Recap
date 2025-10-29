@@ -23,7 +23,10 @@ export const router = createBrowserRouter([
             },
             {
                 path: '*',
-                element: <h1 className="text-7xl font-extrabold text-center">404</h1>
+                element: <div>
+                    <title>404</title>
+                    <h1 className="text-7xl font-extrabold text-center">404</h1>
+                </div>
             }
         ]
     },
