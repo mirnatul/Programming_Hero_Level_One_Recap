@@ -1,4 +1,6 @@
 import React from 'react';
+import { auth } from './../../firebase.init';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const Register = () => {
     const handleRegister = e => {
@@ -6,13 +8,29 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+
+        // catch error before send to firebase
+        const passRegEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+        if (passRegEx.test(password) === false) {
+            // show error message
+            return;
+        }
+
+        // create user
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
     return (
-        <div>
-            register
+        <div className='max-w-md border-2 p-6 mx-auto my-6'>
+            <h2 className='text-2xl mb-4'>Please Register</h2>
             <form onSubmit={handleRegister}>
                 {/* email field */}
-                <div className="join">
+                <div className="">
                     <div>
                         <label className="input validator join-item">
                             <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -32,7 +50,6 @@ const Register = () => {
                         <div className="validator-hint hidden">Enter valid email address</div>
                     </div>
                 </div>
-                <br />
                 <br />
                 {/* password field */}
                 <label className="input validator">
@@ -55,7 +72,7 @@ const Register = () => {
                         type="password"
                         required
                         placeholder="Password"
-                        minlength="8"
+                        minLength="8"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
                     />
