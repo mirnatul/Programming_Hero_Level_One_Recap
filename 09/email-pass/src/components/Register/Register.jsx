@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { auth } from './../../firebase.init';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 const Register = () => {
+
+    const [passShow, setPassShow] = useState(false);
+
     const handleRegister = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
+        const terms = e.target.terms.checked;
+        console.log(email, password, terms);
 
         // catch error before send to firebase
         const passRegEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
@@ -69,18 +74,29 @@ const Register = () => {
                     </svg>
                     <input
                         name='password'
-                        type="password"
+                        type={`${passShow ? "text" : "password"}`}
                         required
                         placeholder="Password"
                         minLength="8"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
                     />
+                    {
+                        passShow ? <FaRegEyeSlash onClick={() => setPassShow(!passShow)} className='text-2xl' />
+                            : <FaRegEye onClick={() => setPassShow(!passShow)} className='text-2xl' />
+                    }
+
                 </label>
                 <p className="validator-hint hidden">
                     Must be more than 8 characters, including
                     <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
                 </p>
+                <br />
+                <br />
+                <label className="label">
+                    <input name='terms' type="checkbox" className="checkbox" />
+                    Accept terms and conditions
+                </label>
                 <br />
                 <br />
                 {/* submit */}
