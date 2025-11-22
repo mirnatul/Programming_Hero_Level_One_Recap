@@ -10,6 +10,10 @@ import Home from './components/Home/Home.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
 import AuthProvider from './contexts/AuthProvider.jsx';
+import Orders from './components/Orders/Orders.jsx';
+import PrivateRoute from './Routes/PrivateRoute.jsx';
+import Profile from './components/Profile/Profile.jsx';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
 
 // context
 // export const AuthContext = createContext(null);
@@ -26,7 +30,20 @@ const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: 'login', Component: Login },
-      { path: 'register', Component: Register }
+      { path: 'register', Component: Register },
+      // { path: 'orders', Component: Orders },
+      {
+        path: 'orders',
+        element: <PrivateRoute><Orders></Orders></PrivateRoute>
+      },
+      {
+        path: 'profile',
+        element: <PrivateRoute><Profile></Profile></PrivateRoute>
+      },
+      {
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
+      }
     ]
   },
 ]);
